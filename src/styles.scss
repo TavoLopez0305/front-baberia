@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #0d6efd;   // azul Bootstrap
+  --success: #198754;
+  --warning: #ffc107;
+  --danger: #dc3545;
+
+  --bg-main: #f5f7fb;
+  --bg-card: #ffffff;
+
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f7fb;
+  color: #1f2937;
+}
+
+h1 { font-size: 2rem; }      // 32px
+h2 { font-size: 1.5rem; }    // 24px
+h3 { font-size: 1.25rem; }   // 20px
+h4 { font-size: 1.125rem; }  // 18px
+p  { font-size: 1rem; }      // 16px
+small { font-size: 0.875rem; } // 14px
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+.container-padding {
+  padding: 1.5rem;
+}
+
+.card {
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
