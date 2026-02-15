@@ -1,0 +1,105 @@
+<section class="min-vh-100 d-flex align-items-center justify-content-center">
+    <div class="container d-flex flex-column">
+        <div class="header_login w-100">
+            <div class="container_img mx-auto p-2 ">
+                <img src="https://media.istockphoto.com/id/1147544807/es/vector/no-imagen-en-miniatura-gr%C3%A1fico-vectorial.jpg?s=612x612&w=0&k=20&c=Bb7KlSXJXh3oSDlyFjIaCiB9llfXsgS7mHFZs6qUgVk=" alt="logo" class="img_logo d-block mx-auto rounded-circle">
+            </div>
+        </div>
+        <!-- --------------------------------------- -->
+        <div class="main_login mx-auto card w-100">
+            <div class="d-flex">
+                <div class="mx-auto col-5 col-md-4 p-2 rounded-3" style="background-color:#f1f5f9;">
+                    <a [routerLink]="['/login']" class="d-block text-center fw-bold" style="font-size: 1.5rem;">Iniciar sesión</a>
+                </div>
+                <div class="col-5 col-md-4 d-flex justify-content-center align-items-center mx-auto  p-2 rounded-3" style="background-color:#f1f5f9;">
+                    <h2 class="text-center fw-bold ">Registrarse</h2>
+                </div>
+            </div>
+            <form [formGroup]="registerForm" (ngSubmit)="enviar()">
+            <div>
+                <label for="" class="form-label">Nombres</label>
+                <input type="text"
+                formControlName = "first_name" 
+                class="form-control"
+                placeholder="Ingresa tus nombres"
+                >
+                @if(campoInvalido('first_name')){
+                    <small class="text-danger">
+                        Nombres Invalido
+                    </small>
+                }
+            </div>
+            <div>
+                <label for="" class="form-label">Apellidos</label>
+                <input type="text"
+                formControlName = "last_name" 
+                class="form-control"
+                placeholder="Ingresa tus apellidos"
+                >
+                @if(campoInvalido('last_name')){
+                    <small class="text-danger">
+                        Apellidos Invalido
+                    </small>
+                }
+            </div>
+            <div>
+                <label for="" class="form-label">Ingresa Correo</label>
+                <input type="email"
+                formControlName = "email" 
+                class="form-control"
+                placeholder="name@example.com"
+                >
+                @if(campoInvalido('email')){
+                    <small class="text-danger">
+                        Correo Invalido
+                    </small>
+                }
+            </div>
+            <div>
+                <label for="" class="form-label">
+                    Contraseña.
+                </label>
+                <input type="password"
+                formControlName = "password" 
+                class="form-control"
+                placeholder="***************"
+                >
+                @if(campoInvalido('password')){
+                <small class="text-danger">
+                    Mínimo 6 caracteres
+                </small>
+                }
+                <div class="w-100">
+                    <button
+                        type="submit"
+                        class="btn_enviar"
+                    >
+                        Entrar
+                    </button>
+                </div>
+            </div>
+            </form>
+            <div class="d-none align-items-center my-3">
+            <hr class="flex-grow-1">
+            <span class="px-3 text-muted small">O continuar con</span>
+            <hr class="flex-grow-1">
+            </div>
+            <div class="d-none justify-content-around  p-2 w-100">
+                <button class="col-5 col-md-4 btn_logear_con">
+                    <i class="bi bi-github"></i>
+                    <p class="fw-bold">GitHub</p>
+                </button>
+                <button class="col-5 btn_logear_con">
+                    <i class="bi bi-google"></i>
+                    <p class="fw-bold">Google</p>
+                </button>
+            </div>
+        </div>  
+        <!-- ------------------------------------------- -->
+
+        <div class="footer_login p-2 text-center">
+            <p>Al hacer clic en continuar, acepta nuestros <span class="small text-primary se-auto">Términos de servicio</span> y <span class="small text-primary se-auto">Política de privacidad.</span></p>
+        </div>
+
+    </div>
+</section>
